@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dicas sobre materiais de coleta</title>
+  </head>
+  <body onload="renderListaDicas()">
+    <section class="navegacao">
+      <a href="../index.html">Voltar</a>
+      <h3>Dicas</h3>
+    </section>
+    <form action="" id="adicionarDicaForm">
+      <div class="formField">
+        <label for="material">Material</label>
+        <select name="material" id="material" required>
+          <option value="">Selecione um material</option>
+          <option value="Plástico" class="plastico">Plástico</option>
+          <option value="Vidro" class="vidro">Vidro</option>
+          <option value="Metal" class="metal">Metal</option>
+          <option value="Papel" class="papel">Papel</option>
+          <option value="Orgânico" class="organico">Orgânico</option>
+        </select>
+      </div>
+      <div class="formField">
+        <label for="dica">Dica</label>
+        <textarea
+          id="dica"
+          name="dica"
+          cols="30"
+          rows="5"
+          placeholder="Escreva uma dica"
+          required
+        ></textarea>
+      </div>
+      <div class="buttonFormField">
+        <button type="submit" id="adicionar">Adicionar</button>
+      </div>
+    </form>
+    <section class="dicasListSection">
+      <form action="" id="filtrarDicasForm">
+        <select name="filtroMaterial" id="filtroMaterial">
+          <option value="">Selecione um material</option>
+          <option value="Plástico" class="plastico">Plástico</option>
+          <option value="Vidro" class="vidro">Vidro</option>
+          <option value="Metal" class="metal">Metal</option>
+          <option value="Papel" class="papel">Papel</option>
+          <option value="Orgânico" class="organico">Orgânico</option>
+        </select>
+        <div class="filtroButtons">
+          <button type="submit">Filtrar</button>
+          <button type="reset">Limpar</button>
+        </div>
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th class="thDica">Dica</th>
+            <th class="thMaterial">Material</th>
+            <th class="thAcao">Ação</th>
+          </tr>
+        </thead>
+        <tbody id="dicasList"></tbody>
+      </table>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
